@@ -1,0 +1,15 @@
+{
+  "reference_position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+  "vehicles": [
+    { "vehicle_id": "A", "position": { "x": 10.0, "y": 0.0 }, "speed_mps": 8.3 },
+    { "vehicle_id": "B", "position": { "x": 40.0, "y": 0.0 }, "speed_mps": 6.1 },
+    { "vehicle_id": "C", "position": { "x": 120.0, "y": 30.0 }, "speed_mps": 4.2 }
+  ],
+  "collaborators": [
+    { "observer_id": "S1", "target_vehicle_id": "A", "signal_quality": 0.5, "trust_score": 0.9 },
+    { "observer_id": "S2", "target_vehicle_id": "B", "signal_quality": 0.3, "trust_score": 0.6 },
+    { "observer_id": "S3", "target_vehicle_id": "C", "signal_quality": 0.7, "trust_score": 0.7 }
+  ]
+}
+
+

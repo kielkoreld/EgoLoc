@@ -45,5 +45,9 @@ python -m examples.select_ego --mode v2x-sim --attack {subtle, adaptive}
 첨부 방식과 다운로드 링크는 ROBOSAC의 README.txt를 참고
 ROBOSAC\coperception\coperception\datasets\
 
-2. yaml 파일을 통해 환경을 다운받아야 함
+2. 아래의 위치에 모델 체크포인트를 첨부해야 함
+첨부 방식과 다운로드 링크는 ROBOSAC의 README.txt를 참고
+ROBOSAC\coperception\ckpt\meanfusion\
+
+3. yaml 파일을 통해 환경을 다운받아야 함
 ```

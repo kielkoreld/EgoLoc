@@ -1,6 +1,6 @@
 __pycache__
 dist/
 site/
-ckpt/meanfusion/
-coperception/datasets/
+ckpt/meanfusion/**/*.pth
+coperception/datasets/V2X-Sim-det
 *.egg-info/

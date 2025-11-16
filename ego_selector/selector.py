@@ -463,8 +463,6 @@ class EgoSelector:
         proof_result = prove_inclusion(
             contributed_detections=collaborative_result,  # 협력자들의 기여 정보 (융합된 결과)
             fused_detections=sent_collaborative_result,  # 후보 차량이 전송한 협업 인식 결과
-            iou_threshold=0.7,  # 더 엄격한 IoU 임계값
-            min_match_ratio=0.95  # 95% 이상 매칭 필요 (매우 엄격하게)
         )
         
         return {
@@ -501,9 +499,6 @@ class EgoSelector:
         consensus_result = peer_consensus_certification(
             peers_results=peers_received_results,
             exclude_agent_id=vehicle_id,  # 후보 차량은 제외
-            iou_threshold=0.7,  # 더 엄격한 IoU 임계값
-            max_unmatched_ratio=0.05,  # 5%까지 불일치 허용 (매우 엄격하게)
-            quorum_ratio=0.95  # 95% 이상 합의 필요 (매우 엄격)
         )
         
         return {

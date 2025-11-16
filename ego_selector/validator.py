@@ -72,7 +72,7 @@ def _match_boxes(contrib_xyxy: List[Tuple[float, float, float, float]], fused_xy
     return matched, len(contrib_xyxy)
 
 
-def prove_inclusion(contributed_detections: List[Dict], fused_detections: List[Dict], iou_threshold: float = 0.5, min_match_ratio: float = 0.2) -> ProofResult:
+def prove_inclusion(contributed_detections: List[Dict], fused_detections: List[Dict], iou_threshold: float = 0.7, min_match_ratio: float = 0.95) -> ProofResult:
     """포함 증명: 협력 차량이 기여한 검출 결과가 협업 인식 결과에 충분히 반영되었는지 검증"""
     contrib_xyxy = [b for b in (_to_xyxy(x) for x in contributed_detections) if b is not None]
     fused_xyxy = [b for b in (_to_xyxy(x) for x in fused_detections) if b is not None]
@@ -104,9 +104,9 @@ class PeerConsensus:
 def peer_consensus_certification(
     peers_results: Dict[str, List[Dict]],
     exclude_agent_id: Optional[str],
-    iou_threshold: float = 0.5,
-    max_unmatched_ratio: float = 0.5,
-    quorum_ratio: float = 0.6,
+    iou_threshold: float = 0.7,
+    max_unmatched_ratio: float = 0.05,
+    quorum_ratio: float = 0.95,
 ) -> PeerConsensus:
     """협력자 합의 검증(유력 자아 후보 제외)"""
     # Build normalized boxes

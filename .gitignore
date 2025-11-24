@@ -3,3 +3,33 @@ temp/
 
 #로그 파일
 logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Conda
+.conda/
+condaenv.*.requirements.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 데이터셋 및 체크포인트 (대용량 파일)
+# 주의: 실제 데이터는 GitHub에 업로드하지 마세요
+ROBOSAC/coperception/coperception/datasets/V2X-Sim-det/V2X-Sim-det/
+ROBOSAC/coperception/ckpt/meanfusion/

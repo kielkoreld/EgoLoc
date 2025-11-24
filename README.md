@@ -69,39 +69,6 @@ chmod +x activate_cuda.sh
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 ```
 
-### GitHub에 업로드하기
-
-```bash
-# 1. WSL에서 Git 설정 (처음 한 번만)
-git config --global --add safe.directory /mnt/c/Users/dnrua/Desktop/EgoLoc
-git config --global core.fileMode false
-git config --global core.autocrlf input
-
-# 2. 사용자 정보 설정 (처음 한 번만)
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-
-# 3. Git 저장소 초기화 (이미 초기화되어 있으면 생략)
-git init
-
-# 4. 파일 추가
-git add .
-
-# 5. 첫 커밋
-git commit -m "Initial commit: EgoLoc project"
-
-# 6. GitHub에서 새 저장소 생성 후 (웹에서)
-# 7. 원격 저장소 추가 및 푸시
-git remote add origin https://github.com/yourusername/EgoLoc.git
-git branch -M main
-git push -u origin main
-```
-
-**참고**: 
-- `.gitignore` 파일이 이미 있어서 불필요한 파일은 자동으로 제외됩니다
-- 대용량 파일(데이터셋, 체크포인트)은 GitHub에 직접 업로드하지 마세요
-- GitHub에서 새 저장소를 먼저 생성한 후 원격 저장소 URL을 사용하세요
-
 ### 주의 사항
 
 ```

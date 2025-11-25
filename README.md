@@ -27,6 +27,7 @@ EgoLoc.yaml
 ```
 
 ### 빠른 시작
+
 ```bash
 # 기본 JSON 샘플 예제 (내장 샘플 파일 사용)
 python -m examples.select_ego
@@ -39,6 +40,9 @@ python -m examples.select_ego --mode v2x-sim --attack {subtle, adaptive}
 
 #평가
 ... --robosac_mAP 추가
+
+#로그 파일 생성
+... --log 추가
 ```
 
 ### 환경 설치
@@ -47,25 +51,26 @@ python -m examples.select_ego --mode v2x-sim --attack {subtle, adaptive}
 # 자동 설치 (권장)
 chmod +x setup_egoloc.sh
 ./setup_egoloc.sh
+
+# 설치 완료 후 환경 활성화
 conda activate EgoLoc
-pip install --no-deps nuscenes-devkit==1.0.9
 ```
 
 ### CUDA 라이브러리 경로 설정 (WSL 환경)
 
-WSL에서 CUDA 라이브러리 오류가 발생하는 경우:
+```bash
+# 1. 자동 설정 스크립트 실행 (한 번만 실행하면 됩니다)
+chmod +x setup_cuda_env.sh
+./setup_cuda_env.sh
+
+# 2. 이후 환경 활성화 시마다 자동으로 설정됩니다
+conda activate EgoLoc
+```
+
+**수동 설정이 필요한 경우** (자동 설정이 작동하지 않을 때만):
 
 ```bash
-# 환경 활성화 후
 conda activate EgoLoc
-
-# CUDA 라이브러리 경로 설정
-source activate_cuda.sh
-# 또는
-chmod +x activate_cuda.sh
-./activate_cuda.sh
-
-# 또는 수동으로 설정
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 ```
 

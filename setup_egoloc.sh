@@ -25,7 +25,13 @@ fi
 echo "[3/3] nuscenes-devkit 설치 중 (의존성 체크 없이)..."
 pip install --no-deps nuscenes-devkit==1.0.9
 
+# 4. CUDA 라이브러리 경로 자동 설정 구성
+echo "[4/4] CUDA 라이브러리 경로 자동 설정 구성 중..."
+chmod +x setup_cuda_env.sh
+./setup_cuda_env.sh
+
 echo ""
 echo "=== 설치 완료! ==="
 echo "환경을 활성화하려면: conda activate EgoLoc"
+echo "CUDA 라이브러리 경로는 환경 활성화 시 자동으로 설정됩니다."
 

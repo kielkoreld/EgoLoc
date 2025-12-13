@@ -1380,7 +1380,7 @@ def main() -> None:
             reference_mode=args.reference_mode,
             save_logs=args.log,
             attack_mode=args.attack,
-        log_bandwidth=args.log_bandwidth,
+            log_bandwidth=args.log_bandwidth,
             no_defense=args.no_defense,
         )
 
